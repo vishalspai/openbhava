@@ -1,0 +1,29 @@
+﻿<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:this="http://thisdiagram/Central_de_Serviços" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://thisdiagram/Central_de_Serviços">
+    <bpdm:dependencies version="5200061">
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Central_de_Serviços" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="processo definido this-process-types"></bpdm:namespaceContributor>
+    </bpdm:dependencies>
+    <bpel:scope name="Central_de_Serviços_7ZURMCGFEd6rVudb_MAMeQ" bpdm:label="Central de Serviços" bpdm:ID="_7ZURMCGFEd6rVudb_MAMeQ">
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" bpdm:label="  Recebe incidente  " bpdm:ID="_bJCV0CGHEd6rVudb_MAMeQ"></bpdm:messagingtask>
+            <bpdm:messagingtask bpdm:label="Notifica atendente" bpdm:ID="_7bSnICGFEd6rVudb_MAMeQ"></bpdm:messagingtask>
+            <bpdm:messagingtask bpdm:label="Recebe solução" bpdm:ID="_wAV74CGHEd6rVudb_MAMeQ"></bpdm:messagingtask>
+            <bpdm:gateway bpdm:label="Exclusive_Data-based_Gateway" bpdm:ID="_nsYPsCGJEd6yvsUF_cnAbA" bpdm:gatewayType="data_xor">
+                <bpdm:linkset bpdm:type="case" bpdm:default="false" bpdm:ID="_EhG_UCGKEd6yvsUF_cnAbA" bpdm:targetDisplayName="[GatewayDataBasedExclusive - Notifica usuário]"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="case" bpdm:default="true" bpdm:ID="_FtD1ECGKEd6yvsUF_cnAbA" bpdm:targetDisplayName="Padrão"></bpdm:linkset>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:label="Notifica usuário" bpdm:ID="_wqqEMCGHEd6rVudb_MAMeQ"></bpdm:messagingtask>
+                    <bpdm:messagingtask bpdm:label="Recebe aceite" bpdm:ID="_xrz_MCGHEd6rVudb_MAMeQ"></bpdm:messagingtask>
+                </bpel:sequence>
+                <bpel:sequence>
+                    <bpdm:messagingtask bpdm:label="Escala problema para especialista no assunto" bpdm:ID="_FsqMcCGKEd6yvsUF_cnAbA"></bpdm:messagingtask>
+                </bpel:sequence>
+            </bpdm:gateway>
+            <bpdm:gateway bpdm:label="Exclusive_Data-based_Gateway" bpdm:ID="_9N-TcCGKEd6yvsUF_cnAbA" bpdm:gatewayType="data_xor" bpdm:isMerge="true"></bpdm:gateway>
+            <bpdm:messagingtask eventType="end: empty" bpdm:label="Fecha incidente" bpdm:ID="_zYxQQCGHEd6rVudb_MAMeQ"></bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

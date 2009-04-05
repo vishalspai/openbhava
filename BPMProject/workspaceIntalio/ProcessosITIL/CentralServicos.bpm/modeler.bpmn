@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_7WtCECGFEd6rVudb_MAMeQ" iD="_7Wg00SGFEd6rVudb_MAMeQ">
+  <pools xmi:type="bpmn:Pool" xmi:id="_7ZURMSGFEd6rVudb_MAMeQ" iD="_7ZURMCGFEd6rVudb_MAMeQ" name="Central de Serviços">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_7bSnISGFEd6rVudb_MAMeQ" iD="_7bSnICGFEd6rVudb_MAMeQ" outgoingEdges="_bTkf8CGJEd6yvsUF_cnAbA" incomingEdges="_bJdzoSGHEd6rVudb_MAMeQ" name="Notifica atendente" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__brEoCGLEd6yvsUF_cnAbA" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__buvACGLEd6yvsUF_cnAbA" key="projectRelativePath" value="document/doc1.xml"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_bJC84CGHEd6rVudb_MAMeQ" iD="_bJCV0CGHEd6rVudb_MAMeQ" outgoingEdges="_bJdzoSGHEd6rVudb_MAMeQ" name="  Recebe incidente  " activityType="EventStartMessage"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_wAV74SGHEd6rVudb_MAMeQ" iD="_wAV74CGHEd6rVudb_MAMeQ" outgoingEdges="_ntH2kSGJEd6yvsUF_cnAbA" incomingEdges="_bTkf8CGJEd6yvsUF_cnAbA" name="Recebe solução">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AbgJ8CGMEd6yvsUF_cnAbA" source="genericFile">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AbgJ8SGMEd6yvsUF_cnAbA" key="projectRelativePath" value="document/teste1.odt"/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_wqqEMSGHEd6rVudb_MAMeQ" iD="_wqqEMCGHEd6rVudb_MAMeQ" outgoingEdges="_7pmWoSGKEd6yvsUF_cnAbA" incomingEdges="_EhNtACGKEd6yvsUF_cnAbA" name="Notifica usuário"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_xrz_MSGHEd6rVudb_MAMeQ" iD="_xrz_MCGHEd6rVudb_MAMeQ" outgoingEdges="_9OLu0SGKEd6yvsUF_cnAbA" incomingEdges="_7pmWoSGKEd6yvsUF_cnAbA" name="Recebe aceite"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_zYxQQSGHEd6rVudb_MAMeQ" iD="_zYxQQCGHEd6rVudb_MAMeQ" incomingEdges="_GRAaMSGLEd6yvsUF_cnAbA" name="Fecha incidente" activityType="EventEndEmpty" looping="false"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_nsYPsSGJEd6yvsUF_cnAbA" iD="_nsYPsCGJEd6yvsUF_cnAbA" outgoingEdges="_EhNtACGKEd6yvsUF_cnAbA _FtEcICGKEd6yvsUF_cnAbA" incomingEdges="_ntH2kSGJEd6yvsUF_cnAbA" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_FsqMcSGKEd6yvsUF_cnAbA" iD="_FsqMcCGKEd6yvsUF_cnAbA" outgoingEdges="_-MCeMSGKEd6yvsUF_cnAbA" incomingEdges="_FtEcICGKEd6yvsUF_cnAbA" documentation="" name="Escala problema para especialista no assunto" ncname="" activityType="Task" looping="false"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_9N-TcSGKEd6yvsUF_cnAbA" iD="_9N-TcCGKEd6yvsUF_cnAbA" outgoingEdges="_GRAaMSGLEd6yvsUF_cnAbA" incomingEdges="_9OLu0SGKEd6yvsUF_cnAbA _-MCeMSGKEd6yvsUF_cnAbA" activityType="GatewayDataBasedExclusive"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_bJdzoSGHEd6rVudb_MAMeQ" iD="_bJdzoCGHEd6rVudb_MAMeQ" source="_bJC84CGHEd6rVudb_MAMeQ" target="_7bSnISGFEd6rVudb_MAMeQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_bTkf8CGJEd6yvsUF_cnAbA" iD="_bTeZUCGJEd6yvsUF_cnAbA" source="_7bSnISGFEd6rVudb_MAMeQ" target="_wAV74SGHEd6rVudb_MAMeQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ntH2kSGJEd6yvsUF_cnAbA" iD="_ntH2kCGJEd6yvsUF_cnAbA" source="_wAV74SGHEd6rVudb_MAMeQ" target="_nsYPsSGJEd6yvsUF_cnAbA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_EhNtACGKEd6yvsUF_cnAbA" iD="_EhG_UCGKEd6yvsUF_cnAbA" source="_nsYPsSGJEd6yvsUF_cnAbA" target="_wqqEMSGHEd6rVudb_MAMeQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_FtEcICGKEd6yvsUF_cnAbA" iD="_FtD1ECGKEd6yvsUF_cnAbA" isDefault="true" source="_nsYPsSGJEd6yvsUF_cnAbA" target="_FsqMcSGKEd6yvsUF_cnAbA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7pmWoSGKEd6yvsUF_cnAbA" iD="_7pmWoCGKEd6yvsUF_cnAbA" source="_wqqEMSGHEd6rVudb_MAMeQ" target="_xrz_MSGHEd6rVudb_MAMeQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_9OLu0SGKEd6yvsUF_cnAbA" iD="_9OLu0CGKEd6yvsUF_cnAbA" source="_xrz_MSGHEd6rVudb_MAMeQ" target="_9N-TcSGKEd6yvsUF_cnAbA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_-MCeMSGKEd6yvsUF_cnAbA" iD="_-MCeMCGKEd6yvsUF_cnAbA" source="_FsqMcSGKEd6yvsUF_cnAbA" target="_9N-TcSGKEd6yvsUF_cnAbA"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_GRAaMSGLEd6yvsUF_cnAbA" iD="_GRAaMCGLEd6yvsUF_cnAbA" source="_9N-TcSGKEd6yvsUF_cnAbA" target="_zYxQQSGHEd6rVudb_MAMeQ"/>
+  </pools>
+</bpmn:BpmnDiagram>
