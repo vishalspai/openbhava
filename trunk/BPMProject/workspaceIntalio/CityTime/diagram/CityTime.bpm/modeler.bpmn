@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_h1hcsCIbEd6jWqDpOMQOqg" iD="_h1SMISIbEd6jWqDpOMQOqg">
+  <pools xmi:type="bpmn:Pool" xmi:id="_h4sFcCIbEd6jWqDpOMQOqg" iD="_h4reYCIbEd6jWqDpOMQOqg" name="CityTime">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_n5kAwSIxEd6jWqDpOMQOqg" iD="_n5kAwCIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n5kAwiIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5kAwyIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5mdAiIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetUTCTimeRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5qHYSIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getUTCTimeSoapIn"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_n5nrICIxEd6jWqDpOMQOqg" direction="To" target="_h6rCcSIbEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n5o5QCIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5qHYCIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_ozstwSIxEd6jWqDpOMQOqg" iD="_ozstwCIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ozstwiIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ozstwyIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ozzbciIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetUTCTimeResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oz13sSIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getUTCTimeSoapOut"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ozzbcyIxEd6jWqDpOMQOqg" direction="From" target="_h6rCcSIbEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oz0CgCIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oz13sCIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_qEPvoSIxEd6jWqDpOMQOqg" iD="_qEPvoCIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qEQWsCIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qEQWsSIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qEXrcCIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetCityTimeRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qE0-cCIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getCityTimeSoapIn"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_qEaHsCIxEd6jWqDpOMQOqg" direction="To" target="_u1ZsISIeEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qEdyECIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qEwtACIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_q0pR0SIxEd6jWqDpOMQOqg" iD="_q0pR0CIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q0pR0iIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q0pR0yIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q00Q8iIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetCityTimeResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q0_3ICIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getCityTimeSoapOut"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_q02tMCIxEd6jWqDpOMQOqg" direction="From" target="_u1ZsISIeEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q06-oCIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q0_QECIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_KkUoQCI1Ed6jWqDpOMQOqg" iD="_KkUBMCI1Ed6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KkUoQSI1Ed6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkUoQiI1Ed6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkfnYiI1Ed6jWqDpOMQOqg" key="defaultDeclarationName" value="thisReceive_requestRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkuQ4CI1Ed6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/CityTime}Receive_requestRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_KklG8CI1Ed6jWqDpOMQOqg" direction="From" target="_mUrBMSIeEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Kkp_cCI1Ed6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Kktp0CI1Ed6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_LY0AQSI1Ed6jWqDpOMQOqg" iD="_LY0AQCI1Ed6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LY0AQiI1Ed6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LY0AQyI1Ed6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZD34iI1Ed6jWqDpOMQOqg" key="defaultDeclarationName" value="thisReceive_requestResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZO3ACI1Ed6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/CityTime}Receive_requestResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_LZG7MCI1Ed6jWqDpOMQOqg" direction="To" target="_32G3oCIeEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZJ-gCI1Ed6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZNo4CI1Ed6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_h6rCcSIbEd6jWqDpOMQOqg" iD="_h6rCcCIbEd6jWqDpOMQOqg" associations="_n5nrICIxEd6jWqDpOMQOqg _ozzbcyIxEd6jWqDpOMQOqg" outgoingEdges="_u1snESIeEd6jWqDpOMQOqg" incomingEdges="_mVC0oSIeEd6jWqDpOMQOqg" name="Invoke UTC time" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_n5LmQCIxEd6jWqDpOMQOqg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_oxiKkSIxEd6jWqDpOMQOqg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_mUrBMSIeEd6jWqDpOMQOqg" iD="_mUrBMCIeEd6jWqDpOMQOqg" associations="_KklG8CI1Ed6jWqDpOMQOqg" outgoingEdges="_mVC0oSIeEd6jWqDpOMQOqg" name="Receive request" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_KjndoSI1Ed6jWqDpOMQOqg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_u1ZsISIeEd6jWqDpOMQOqg" iD="_u1ZsICIeEd6jWqDpOMQOqg" associations="_qEaHsCIxEd6jWqDpOMQOqg _q02tMCIxEd6jWqDpOMQOqg" outgoingEdges="_33c7cSIeEd6jWqDpOMQOqg" incomingEdges="_u1snESIeEd6jWqDpOMQOqg" name="Invoke city time" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_qDwAYSIxEd6jWqDpOMQOqg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_qzR_4SIxEd6jWqDpOMQOqg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_32G3oCIeEd6jWqDpOMQOqg" iD="_32GQkCIeEd6jWqDpOMQOqg" associations="_LZG7MCI1Ed6jWqDpOMQOqg" incomingEdges="_33c7cSIeEd6jWqDpOMQOqg" name="Send response" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_LYugsSI1Ed6jWqDpOMQOqg"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_mVC0oSIeEd6jWqDpOMQOqg" iD="_mVC0oCIeEd6jWqDpOMQOqg" source="_mUrBMSIeEd6jWqDpOMQOqg" target="_h6rCcSIbEd6jWqDpOMQOqg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_u1snESIeEd6jWqDpOMQOqg" iD="_u1snECIeEd6jWqDpOMQOqg" source="_h6rCcSIbEd6jWqDpOMQOqg" target="_u1ZsISIeEd6jWqDpOMQOqg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_33c7cSIeEd6jWqDpOMQOqg" iD="_33c7cCIeEd6jWqDpOMQOqg" source="_u1ZsISIeEd6jWqDpOMQOqg" target="_32G3oCIeEd6jWqDpOMQOqg"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_bURxsSIlEd6jWqDpOMQOqg" iD="_bURxsCIlEd6jWqDpOMQOqg" name="TimeService">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nvlb0CIlEd6jWqDpOMQOqg" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nvn4ECIlEd6jWqDpOMQOqg" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_n5r8kSIxEd6jWqDpOMQOqg" iD="_n5r8kCIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n5r8kiIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5r8kyIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5u_4iIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetUTCTimeRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5yDMCIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getUTCTimeSoapIn"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_n5wOACIxEd6jWqDpOMQOqg" direction="From" target="_j2nIsCIxEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n5w1ECIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5xcICIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_oysBICIxEd6jWqDpOMQOqg" iD="_oyraECIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oysBISIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oysBIiIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ozAKMCIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetUTCTimeResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ozpqcCIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getUTCTimeSoapOut"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_ozFpwCIxEd6jWqDpOMQOqg" direction="To" target="_j2nIsCIxEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ozM-gCIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ozn1QCIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_qE2zoSIxEd6jWqDpOMQOqg" iD="_qE2zoCIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qE2zoiIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qE2zoyIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qE_WgCIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetCityTimeRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qFNY8CIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getCityTimeSoapIn"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_qFBLsCIxEd6jWqDpOMQOqg" direction="From" target="_k26IECIxEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qFKVoCIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qFMx4CIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_qz6SASIxEd6jWqDpOMQOqg" iD="_qz6SACIxEd6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qz6SAiIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qz6SAyIxEd6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q0JikiIxEd6jWqDpOMQOqg" key="defaultDeclarationName" value="tnsGetCityTimeResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q0droCIxEd6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://ws.intalio.com/TimeService/}getCityTimeSoapOut"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_q0PpMCIxEd6jWqDpOMQOqg" direction="To" target="_k26IECIxEd6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_q0UhsCIxEd6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_q0dEkCIxEd6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_j2nIsCIxEd6jWqDpOMQOqg" iD="_j2GyYCIxEd6jWqDpOMQOqg" associations="_n5wOACIxEd6jWqDpOMQOqg _ozFpwCIxEd6jWqDpOMQOqg" name="getUTCTime" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j2nIsSIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j2nIsiIxEd6jWqDpOMQOqg" key="douri" value="project:///service/TimeService.wsdl?wsdloperationbound={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_n5LmQCIxEd6jWqDpOMQOqg"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_oxiKkSIxEd6jWqDpOMQOqg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_k26IECIxEd6jWqDpOMQOqg" iD="_k21PkiIxEd6jWqDpOMQOqg" associations="_qFBLsCIxEd6jWqDpOMQOqg _q0PpMCIxEd6jWqDpOMQOqg" name="getCityTime" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k26IESIxEd6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k26IEiIxEd6jWqDpOMQOqg" key="douri" value="project:///service/TimeService.wsdl?wsdloperationbound={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_qDwAYSIxEd6jWqDpOMQOqg"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_qzR_4SIxEd6jWqDpOMQOqg"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_xm0B0SI0Ed6jWqDpOMQOqg" iD="_xm0B0CI0Ed6jWqDpOMQOqg" name="Interface">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s_35oCI5Ed6jWqDpOMQOqg" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s_35oSI5Ed6jWqDpOMQOqg" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_KjuyYSI1Ed6jWqDpOMQOqg" iD="_KjuyYCI1Ed6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KjuyYiI1Ed6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KjuyYyI1Ed6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkK3QCI1Ed6jWqDpOMQOqg" key="defaultDeclarationName" value="cityTimeReceive_requestRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkSMACI1Ed6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/CityTime}Receive_requestRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_KkPIsCI1Ed6jWqDpOMQOqg" direction="To" target="_3J0XYSI0Ed6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KkQW0CI1Ed6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkRk8CI1Ed6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_LZQFISI1Ed6jWqDpOMQOqg" iD="_LZQFICI1Ed6jWqDpOMQOqg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZQsMCI1Ed6jWqDpOMQOqg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZQsMSI1Ed6jWqDpOMQOqg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZTIeCI1Ed6jWqDpOMQOqg" key="defaultDeclarationName" value="cityTimeReceive_requestResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZVksSI1Ed6jWqDpOMQOqg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/CityTime}Receive_requestResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_LZUWkCI1Ed6jWqDpOMQOqg" direction="From" target="_3J0XYSI0Ed6jWqDpOMQOqg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LZU9oCI1Ed6jWqDpOMQOqg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LZVksCI1Ed6jWqDpOMQOqg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_3J0XYSI0Ed6jWqDpOMQOqg" iD="_3J0XYCI0Ed6jWqDpOMQOqg" associations="_KkPIsCI1Ed6jWqDpOMQOqg _LZUWkCI1Ed6jWqDpOMQOqg" name="Invoke process" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_KjndoSI1Ed6jWqDpOMQOqg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_LYugsSI1Ed6jWqDpOMQOqg"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_n5LmQCIxEd6jWqDpOMQOqg" iD="_n5K_MCIxEd6jWqDpOMQOqg" source="_h6rCcSIbEd6jWqDpOMQOqg" target="_j2nIsCIxEd6jWqDpOMQOqg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_n5S7ACIxEd6jWqDpOMQOqg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_n5S7ASIxEd6jWqDpOMQOqg" key="douri" value="project:///service/TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime/input/getUTCTimeRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_oxiKkSIxEd6jWqDpOMQOqg" iD="_oxiKkCIxEd6jWqDpOMQOqg" source="_j2nIsCIxEd6jWqDpOMQOqg" target="_h6rCcSIbEd6jWqDpOMQOqg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oxl08CIxEd6jWqDpOMQOqg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oxmcACIxEd6jWqDpOMQOqg" key="douri" value="project:///service/TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime/output/getUTCTimeResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_qDwAYSIxEd6jWqDpOMQOqg" iD="_qDwAYCIxEd6jWqDpOMQOqg" source="_u1ZsISIeEd6jWqDpOMQOqg" target="_k26IECIxEd6jWqDpOMQOqg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qD2HACIxEd6jWqDpOMQOqg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qD2HASIxEd6jWqDpOMQOqg" key="douri" value="project:///service/TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime/input/getCityTimeRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_qzR_4SIxEd6jWqDpOMQOqg" iD="_qzR_4CIxEd6jWqDpOMQOqg" source="_k26IECIxEd6jWqDpOMQOqg" target="_u1ZsISIeEd6jWqDpOMQOqg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qzZ7sCIxEd6jWqDpOMQOqg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qzZ7sSIxEd6jWqDpOMQOqg" key="douri" value="project:///service/TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime/output/getCityTimeResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_KjndoSI1Ed6jWqDpOMQOqg" iD="_KjndoCI1Ed6jWqDpOMQOqg" source="_3J0XYSI0Ed6jWqDpOMQOqg" target="_mUrBMSIeEd6jWqDpOMQOqg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_J8u8cCI4Ed6jWqDpOMQOqg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_J8u8cSI4Ed6jWqDpOMQOqg" key="douri" value="project:///data/GetTime.xsd?xsdelement={http://bpms.intalio.com/FirstProcess/Time}TimeRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_LYugsSI1Ed6jWqDpOMQOqg" iD="_LYugsCI1Ed6jWqDpOMQOqg" source="_32G3oCIeEd6jWqDpOMQOqg" target="_3J0XYSI0Ed6jWqDpOMQOqg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_L5GigCI4Ed6jWqDpOMQOqg" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L5HJkCI4Ed6jWqDpOMQOqg" key="douri" value="project:///data/GetTime.xsd?xsdelement={http://bpms.intalio.com/FirstProcess/Time}TimeResponse"/>
+    </eAnnotations>
+  </messages>
+</bpmn:BpmnDiagram>

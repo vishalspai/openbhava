@@ -1,0 +1,33 @@
+﻿<bpel:process xmlns:ns="http://bpms.intalio.com/FirstProcess/Time" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:diag="http://thisdiagram" xmlns:CityTime="http://thisdiagram/CityTime" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:this="http://thisdiagram/Interface" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://thisdiagram/Interface">
+    <bpdm:dependencies version="5200061">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Interface" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/CityTime" bpdm:prefix="CityTime" bpdm:comment="contrib=&apos;partner-pool:///_h4reYCIbEd6jWqDpOMQOqg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/FirstProcess/Time" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///data/GetTime.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_h4reYCIbEd6jWqDpOMQOqg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="processo definido this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_h4reYCIbEd6jWqDpOMQOqg" bpdm:label="CityTime"/>
+        <bpdm:namespaceContributor bpdm:url="project:///data/GetTime.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope name="Interface_xm0B0CI0Ed6jWqDpOMQOqg" bpdm:label="Interface" bpdm:ID="_xm0B0CI0Ed6jWqDpOMQOqg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="interfaceAndCityTimePlkVar" partnerLinkType="diag:InterfaceAndCityTime" initializePartnerRole="true" partnerRole="CityTime_for_Interface" bpdm:invokedService="CityTime:CanonicServiceForInterface" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/CityTime/Interface" bpdm:invokedIsDefault="true" bpdm:clientTasks="_xm0B0CI0Ed6jWqDpOMQOqg:_3J0XYCI0Ed6jWqDpOMQOqg" bpdm:isManaged="true" bpdm:otherPoolId="_h4reYCIbEd6jWqDpOMQOqg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="cityTimeReceive_requestRequestMsg" messageType="CityTime:Receive_requestRequest" bpdm:id="_KjuyYCI1Ed6jWqDpOMQOqg" bpdm:messageIds=" out:_KjndoCI1Ed6jWqDpOMQOqg">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="CityTime:Receive_requestRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="cityTimeReceive_requestResponseMsg" messageType="CityTime:Receive_requestResponse" bpdm:id="_LZQFICI1Ed6jWqDpOMQOqg" bpdm:messageIds="inc:_LYugsCI1Ed6jWqDpOMQOqg"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Receive_request" partnerLink="interfaceAndCityTimePlkVar" portType="CityTime:ForInterface" isMyRole="false" bpdm:label="Invoke process" bpdm:ID="_3J0XYCI0Ed6jWqDpOMQOqg">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="cityTimeReceive_requestRequestMsg" bpdm:msgVarScopeId="_xm0B0CI0Ed6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="CityTime:Receive_requestRequest" bpdm:ID="_KjndoCI1Ed6jWqDpOMQOqg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="cityTimeReceive_requestResponseMsg" bpdm:msgVarScopeId="_xm0B0CI0Ed6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="CityTime:Receive_requestResponse" bpdm:ID="_LYugsCI1Ed6jWqDpOMQOqg"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

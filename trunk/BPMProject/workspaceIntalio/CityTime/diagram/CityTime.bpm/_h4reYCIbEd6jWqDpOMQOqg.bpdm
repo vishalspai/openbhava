@@ -1,0 +1,101 @@
+﻿<bpel:process xmlns:ns="http://bpms.intalio.com/FirstProcess/Time" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:Interface="http://thisdiagram/Interface" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:diag="http://thisdiagram" xmlns:tns="http://ws.intalio.com/TimeService/" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:this="http://thisdiagram/CityTime" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://thisdiagram/CityTime">
+    <bpdm:dependencies version="5200061">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Interface" bpdm:prefix="Interface" bpdm:comment="contrib=&apos;partner-pool:///_xm0B0CI0Ed6jWqDpOMQOqg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/CityTime" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/FirstProcess/Time" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///data/GetTime.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://ws.intalio.com/TimeService/" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///service/TimeService.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_bURxsCIlEd6jWqDpOMQOqg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="processo definido this-process-types">
+            <wsdl:portType name="ForInterface">
+                <wsdl:operation name="Receive_request" bpdm:source="partner-pool:///_xm0B0CI0Ed6jWqDpOMQOqg">
+                    <wsdl:input message="this:Receive_requestRequest" name="Receive_request"/>
+                    <wsdl:output message="this:Receive_requestResponse" name="Receive_requestResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <wsdl:message name="Receive_requestRequest" bpdm:source="partner-pool:///_xm0B0CI0Ed6jWqDpOMQOqg">
+                <wsdl:part name="body" element="ns:TimeRequest"/>
+            </wsdl:message>
+            <wsdl:message name="Receive_requestResponse" bpdm:source="partner-pool:///_xm0B0CI0Ed6jWqDpOMQOqg">
+                <wsdl:part name="body" element="ns:TimeResponse"/>
+            </wsdl:message>
+            <bpel:binding name="CanonicBindingForInterface" type="this:ForInterface" bpdm:isSynchronized="true"/>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="project:///service/TimeService.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_bURxsCIlEd6jWqDpOMQOqg" bpdm:label="TimeService"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_xm0B0CI0Ed6jWqDpOMQOqg" bpdm:label="Interface"/>
+        <bpdm:namespaceContributor bpdm:url="project:///data/GetTime.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope name="CityTime_h4reYCIbEd6jWqDpOMQOqg" bpdm:label="CityTime" bpdm:ID="_h4reYCIbEd6jWqDpOMQOqg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="cityTimeAndTimeServiceForPortTimeServiceSoapPlkVar" partnerLinkType="diag:CityTimeAndTimeServiceForPortTimeServiceSoapPlk" initializePartnerRole="true" partnerRole="TimeService_for_CityTime" bpdm:invokedService="tns:TimeService" bpdm:invokedPort="TimeServiceSoap" bpdm:invokedSOAPAddress="http://ws.intalio.com/TimeService/" bpdm:invokedIsDefault="true" bpdm:clientTasks="_h4reYCIbEd6jWqDpOMQOqg:_h6rCcCIbEd6jWqDpOMQOqg, _h4reYCIbEd6jWqDpOMQOqg:_u1ZsICIeEd6jWqDpOMQOqg" bpdm:isManaged="true" bpdm:otherPoolId="_bURxsCIlEd6jWqDpOMQOqg"/>
+            <bpel:partnerLink name="interfaceAndCityTimePlkVar" partnerLinkType="diag:InterfaceAndCityTime" myRole="CityTime_for_Interface" bpdm:providedService="this:CanonicServiceForInterface" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/CityTime/Interface" bpdm:providedIsDefault="true" bpdm:clientTasks="_h4reYCIbEd6jWqDpOMQOqg:_mUrBMCIeEd6jWqDpOMQOqg, _h4reYCIbEd6jWqDpOMQOqg:_32GQkCIeEd6jWqDpOMQOqg" bpdm:isManaged="true" bpdm:otherPoolId="_xm0B0CI0Ed6jWqDpOMQOqg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="tnsGetUTCTimeRequestMsg" messageType="tns:getUTCTimeSoapIn" binding="tns:TimeServiceSoap" operation="getUTCTime" opMsgType="0" bpdm:id="_n5kAwCIxEd6jWqDpOMQOqg" bpdm:messageIds=" out:_-_sgwCIvEd6jWqDpOMQOqg">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="tns:getUTCTimeSoapIn" bpdm:linkedPart="parameters" bpdm:binding="tns:TimeServiceSoap" bpdm:opMsgType="0" bpdm:operation="getUTCTime"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="tnsGetUTCTimeResponseMsg" messageType="tns:getUTCTimeSoapOut" binding="tns:TimeServiceSoap" operation="getUTCTime" opMsgType="1" bpdm:id="_ozstwCIxEd6jWqDpOMQOqg" bpdm:messageIds="inc:_AP6LcCIwEd6jWqDpOMQOqg"/>
+            <bpel:variable name="tnsGetCityTimeRequestMsg" messageType="tns:getCityTimeSoapIn" binding="tns:TimeServiceSoap" operation="getCityTime" opMsgType="0" bpdm:id="_qEPvoCIxEd6jWqDpOMQOqg" bpdm:messageIds=" out:_BsMjQCIwEd6jWqDpOMQOqg">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="tns:getCityTimeSoapIn" bpdm:linkedPart="parameters" bpdm:binding="tns:TimeServiceSoap" bpdm:opMsgType="0" bpdm:operation="getCityTime"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="tnsGetCityTimeResponseMsg" messageType="tns:getCityTimeSoapOut" binding="tns:TimeServiceSoap" operation="getCityTime" opMsgType="1" bpdm:id="_q0pR0CIxEd6jWqDpOMQOqg" bpdm:messageIds="inc:_CX2vYCIwEd6jWqDpOMQOqg"/>
+            <bpel:variable name="thisReceive_requestRequestMsg" messageType="this:Receive_requestRequest" bpdm:id="_KkUBMCI1Ed6jWqDpOMQOqg" bpdm:messageIds="inc:_KjndoCI1Ed6jWqDpOMQOqg"/>
+            <bpel:variable name="thisReceive_requestResponseMsg" messageType="this:Receive_requestResponse" bpdm:id="_LY0AQCI1Ed6jWqDpOMQOqg" bpdm:messageIds=" out:_LYugsCI1Ed6jWqDpOMQOqg">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:Receive_requestResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Receive_request" partnerLink="interfaceAndCityTimePlkVar" portType="this:ForInterface" isMyRole="true" bpdm:label="Receive request" bpdm:ID="_mUrBMCIeEd6jWqDpOMQOqg">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisReceive_requestRequestMsg" bpdm:msgVarScopeId="_h4reYCIbEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestRequest" bpdm:ID="_KjndoCI1Ed6jWqDpOMQOqg"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="getUTCTime" partnerLink="cityTimeAndTimeServiceForPortTimeServiceSoapPlkVar" portType="tns:TimeServiceSoap" isMyRole="false" bpdm:label="Invoke UTC time" bpdm:ID="_h6rCcCIbEd6jWqDpOMQOqg">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsGetUTCTimeRequestMsg" bpdm:msgVarScopeId="_h4reYCIbEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getUTCTimeSoapIn" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_-_sgwCIvEd6jWqDpOMQOqg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsGetUTCTimeResponseMsg" bpdm:msgVarScopeId="_h4reYCIbEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getUTCTimeSoapOut" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_AP6LcCIwEd6jWqDpOMQOqg"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask operation="getCityTime" partnerLink="cityTimeAndTimeServiceForPortTimeServiceSoapPlkVar" portType="tns:TimeServiceSoap" isMyRole="false" bpdm:label="Invoke city time" bpdm:ID="_u1ZsICIeEd6jWqDpOMQOqg">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$thisReceive_requestRequestMsg.body/ns:city/text()</bpel:from>
+                        <bpel:to>$tnsGetCityTimeRequestMsg.parameters/tns:city/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="20673372" targetPath="$tnsGetCityTimeRequestMsg.parameters/tns:city/text()" targetedBy="10415077-arg0"></mapper:vertice>
+  <mapper:vertice id="10415077" sourcePath="$thisReceive_requestRequestMsg.body/ns:city/text()"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="tnsGetCityTimeRequestMsg" bpdm:msgVarScopeId="_h4reYCIbEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getCityTimeSoapIn" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_BsMjQCIwEd6jWqDpOMQOqg"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="tnsGetCityTimeResponseMsg" bpdm:msgVarScopeId="_h4reYCIbEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getCityTimeSoapOut" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_CX2vYCIwEd6jWqDpOMQOqg"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="Receive_request" partnerLink="interfaceAndCityTimePlkVar" portType="this:ForInterface" isMyRole="true" bpdm:label="Send response" bpdm:ID="_32GQkCIeEd6jWqDpOMQOqg">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>$tnsGetUTCTimeResponseMsg.parameters/tns:getUTCTimeResult/text()</bpel:from>
+                        <bpel:to>$thisReceive_requestResponseMsg.body/ns:UTCTime/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="10905551" targetPath="$thisReceive_requestResponseMsg.body/ns:UTCTime/text()" targetedBy="9121561-arg0"></mapper:vertice>
+  <mapper:vertice id="9121561" sourcePath="$tnsGetUTCTimeResponseMsg.parameters/tns:getUTCTimeResult/text()"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                    <bpel:copy>
+                        <bpel:from>$tnsGetCityTimeResponseMsg.parameters/tns:getCityTimeResult/text()</bpel:from>
+                        <bpel:to>$thisReceive_requestResponseMsg.body/ns:cityTime/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="27612802" targetPath="$thisReceive_requestResponseMsg.body/ns:cityTime/text()" targetedBy="8320159-arg0"></mapper:vertice>
+  <mapper:vertice id="8320159" sourcePath="$tnsGetCityTimeResponseMsg.parameters/tns:getCityTimeResult/text()"></mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisReceive_requestResponseMsg" bpdm:msgVarScopeId="_h4reYCIbEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="this:Receive_requestResponse" bpdm:ID="_LYugsCI1Ed6jWqDpOMQOqg"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>

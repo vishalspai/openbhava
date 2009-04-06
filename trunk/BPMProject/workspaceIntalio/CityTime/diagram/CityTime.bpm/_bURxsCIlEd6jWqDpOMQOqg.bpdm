@@ -1,0 +1,47 @@
+﻿<bpel:process xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:diag="http://thisdiagram" xmlns:tns="http://ws.intalio.com/TimeService/" xmlns:CityTime="http://thisdiagram/CityTime" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:this="http://thisdiagram/TimeService" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://thisdiagram/TimeService">
+    <bpdm:dependencies version="5200061">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/CityTime" bpdm:prefix="CityTime" bpdm:comment="contrib=&apos;partner-pool:///_h4reYCIbEd6jWqDpOMQOqg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/TimeService" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://ws.intalio.com/TimeService/" bpdm:prefix="tns" bpdm:comment="contrib=&apos;project:///service/TimeService.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_h4reYCIbEd6jWqDpOMQOqg"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="processo definido this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="project:///service/TimeService.wsdl"/>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_h4reYCIbEd6jWqDpOMQOqg" bpdm:label="CityTime"/>
+    </bpdm:dependencies>
+    <bpel:scope name="TimeService_bURxsCIlEd6jWqDpOMQOqg" bpdm:label="TimeService" bpdm:ID="_bURxsCIlEd6jWqDpOMQOqg">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="cityTimeAndTimeServiceForPortTimeServiceSoapPlkVar" partnerLinkType="diag:CityTimeAndTimeServiceForPortTimeServiceSoapPlk" myRole="TimeService_for_CityTime" bpdm:providedService="tns:TimeService" bpdm:providedPort="TimeServiceSoap" bpdm:provideSOAPAddress="http://ws.intalio.com/TimeService/" bpdm:providedIsDefault="true" bpdm:clientTasks="_bURxsCIlEd6jWqDpOMQOqg:_k21PkiIxEd6jWqDpOMQOqg, _bURxsCIlEd6jWqDpOMQOqg:_j2GyYCIxEd6jWqDpOMQOqg" bpdm:isManaged="true" bpdm:otherPoolId="_h4reYCIbEd6jWqDpOMQOqg"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="tnsGetUTCTimeRequestMsg" messageType="tns:getUTCTimeSoapIn" binding="tns:TimeServiceSoap" operation="getUTCTime" opMsgType="0" bpdm:id="_n5r8kCIxEd6jWqDpOMQOqg" bpdm:messageIds="inc:_n5K_MCIxEd6jWqDpOMQOqg"/>
+            <bpel:variable name="tnsGetUTCTimeResponseMsg" messageType="tns:getUTCTimeSoapOut" binding="tns:TimeServiceSoap" operation="getUTCTime" opMsgType="1" bpdm:id="_oyraECIxEd6jWqDpOMQOqg" bpdm:messageIds=" out:_oxiKkCIxEd6jWqDpOMQOqg">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="tns:getUTCTimeSoapOut" bpdm:linkedPart="parameters" bpdm:binding="tns:TimeServiceSoap" bpdm:opMsgType="1" bpdm:operation="getUTCTime"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="tnsGetCityTimeRequestMsg" messageType="tns:getCityTimeSoapIn" binding="tns:TimeServiceSoap" operation="getCityTime" opMsgType="0" bpdm:id="_qE2zoCIxEd6jWqDpOMQOqg" bpdm:messageIds="inc:_qDwAYCIxEd6jWqDpOMQOqg"/>
+            <bpel:variable name="tnsGetCityTimeResponseMsg" messageType="tns:getCityTimeSoapOut" binding="tns:TimeServiceSoap" operation="getCityTime" opMsgType="1" bpdm:id="_qz6SACIxEd6jWqDpOMQOqg" bpdm:messageIds=" out:_qzR_4CIxEd6jWqDpOMQOqg">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="tns:getCityTimeSoapOut" bpdm:linkedPart="parameters" bpdm:binding="tns:TimeServiceSoap" bpdm:opMsgType="1" bpdm:operation="getCityTime"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:flow>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="getCityTime" partnerLink="cityTimeAndTimeServiceForPortTimeServiceSoapPlkVar" portType="tns:TimeServiceSoap" isMyRole="true" bpdm:label="getCityTime" bpdm:ID="_k21PkiIxEd6jWqDpOMQOqg">
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="tnsGetCityTimeRequestMsg" bpdm:msgVarScopeId="_bURxsCIlEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getCityTimeSoapIn" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_qDwAYCIxEd6jWqDpOMQOqg"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="tnsGetCityTimeResponseMsg" bpdm:msgVarScopeId="_bURxsCIlEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getCityTimeSoapOut" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_qzR_4CIxEd6jWqDpOMQOqg"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+            <bpel:sequence>
+                <bpdm:messagingtask operation="getUTCTime" partnerLink="cityTimeAndTimeServiceForPortTimeServiceSoapPlkVar" portType="tns:TimeServiceSoap" isMyRole="true" bpdm:label="getUTCTime" bpdm:ID="_j2GyYCIxEd6jWqDpOMQOqg">
+                    <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="tnsGetUTCTimeRequestMsg" bpdm:msgVarScopeId="_bURxsCIlEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getUTCTimeSoapIn" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_n5K_MCIxEd6jWqDpOMQOqg"></bpdm:linkset>
+                    <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="tnsGetUTCTimeResponseMsg" bpdm:msgVarScopeId="_bURxsCIlEd6jWqDpOMQOqg" bpdm:variableIsManaged="true" bpdm:messageType="tns:getUTCTimeSoapOut" bpdm:binding="tns:TimeServiceSoap" bpdm:ID="_oxiKkCIxEd6jWqDpOMQOqg"></bpdm:linkset>
+                </bpdm:messagingtask>
+            </bpel:sequence>
+        </bpel:flow>
+    </bpel:scope>
+</bpel:process>
