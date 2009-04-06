@@ -1,0 +1,43 @@
+<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:bpel="http://schemas.xmlsoap.org/ws/2004/03/business-process/" xmlns:pnlk="http://schemas.xmlsoap.org/ws/2004/03/partner-link/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://thisdiagram/TimeServer">
+    <bpdm:dependencies version="5000129">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/FirstProcess" bpdm:prefix="FirstProcess" bpdm:comment="contrib=&apos;partner-pool:///_MmE9YDEVEdyJMOclT3liPQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/TimeServer" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://ws.intalio.com/TimeService/" bpdm:prefix="TimeService" bpdm:comment="contrib=&apos;project:///TimeService.wsdl"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_MmE9YDEVEdyJMOclT3liPQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_MmE9YDEVEdyJMOclT3liPQ" bpdm:label="FirstProcess"/>
+        <bpdm:namespaceContributor bpdm:url="project:///TimeService.wsdl"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="TimeServer" bpdm:ID="_X3pYQDEVEdyJMOclT3liPQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="timeServerAndFirstProcessForPortTimeServiceSoapPlkVar" partnerLinkType="diag:TimeServerAndFirstProcessForPortTimeServiceSoapPlk" myRole="TimeServer_for_FirstProcess" bpdm:providedService="TimeService:TimeService" bpdm:providedPort="TimeServiceSoap" bpdm:provideSOAPAddress="http://ws.intalio.com/TimeService/" bpdm:providedIsDefault="true" bpdm:isManaged="true" bpdm:mgrId="_X3pYQDEVEdyJMOclT3liPQ-_MmE9YDEVEdyJMOclT3liPQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="timeServiceGetCityTimeRequestMsg" messageType="TimeService:getCityTimeSoapIn" bpdm:isManaged="true"/>
+            <bpel:variable name="timeServiceGetCityTimeResponseMsg" messageType="TimeService:getCityTimeSoapOut" bpdm:isManaged="true">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="TimeService:getCityTimeSoapOut" bpdm:linkedPart="parameters"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="timeServiceGetUTCTimeRequestMsg" messageType="TimeService:getUTCTimeSoapIn" bpdm:isManaged="true"/>
+            <bpel:variable name="timeServiceGetUTCTimeResponseMsg" messageType="TimeService:getUTCTimeSoapOut" bpdm:isManaged="true">
+                <bpel:from bpdm:toPart="parameters">
+                    <bpel:literal bpdm:linkedMessageType="TimeService:getUTCTimeSoapOut" bpdm:linkedPart="parameters"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="getCityTime" partnerLink="timeServerAndFirstProcessForPortTimeServiceSoapPlkVar" portType="TimeService:TimeServiceSoap" isMyRole="true" bpdm:label="getCityTime" bpdm:ID="_hk4SmDEVEdyJMOclT3liPQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="timeServiceGetCityTimeRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="TimeService:getCityTimeSoapIn" bpdm:ID="_h9dKoDEVEdyJMOclT3liPQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="timeServiceGetCityTimeResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="TimeService:getCityTimeSoapOut" bpdm:ID="_iLAecDEVEdyJMOclT3liPQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="getUTCTime" partnerLink="timeServerAndFirstProcessForPortTimeServiceSoapPlkVar" portType="TimeService:TimeServiceSoap" isMyRole="true" bpdm:label="getUTCTime" bpdm:ID="_hf41IDEmEdyJMOclT3liPQ">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="timeServiceGetUTCTimeRequestMsg" bpdm:variableIsManaged="true" bpdm:messageType="TimeService:getUTCTimeSoapIn" bpdm:ID="_h1VgsDEmEdyJMOclT3liPQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="timeServiceGetUTCTimeResponseMsg" bpdm:variableIsManaged="true" bpdm:messageType="TimeService:getUTCTimeSoapOut" bpdm:ID="_h_7AEDEmEdyJMOclT3liPQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
