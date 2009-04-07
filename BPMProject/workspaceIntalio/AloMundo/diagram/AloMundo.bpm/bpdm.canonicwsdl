@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:Teste="http://thisdiagram/Teste" xmlns:AloMundo="http://thisdiagram/AloMundo" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="5200061" bpdm:canid="_SIhHUCLWEd60g7_YNlzaKg" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="TesteAndAloMundo" bpdm:poolOneId="_SJA2kCLWEd60g7_YNlzaKg" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="AloMundo" bpdm:poolTwoId="_fpziECLWEd60g7_YNlzaKg" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Teste">
+    <pnlk:role name="AloMundo_for_Teste" portType="AloMundo:ForTeste" bpdm:thisPoolId="_SJA2kCLWEd60g7_YNlzaKg">
+      <wsdl:portType name="ForTeste">
+        <wsdl:operation name="Iniciar" bpdm:canid="_k8KzkCLWEd60g7_YNlzaKg._mu7KoCLWEd60g7_YNlzaKg._xprA8CLWEd60g7_YNlzaKg.">
+          <wsdl:input message="AloMundo:IniciarRequest" name="Iniciar" bpdm:canid="_xpxuoCLWEd60g7_YNlzaKg" bpdm:senderId="_xprA8CLWEd60g7_YNlzaKg" bpdm:receiverId="_k8KzkCLWEd60g7_YNlzaKg" bpdm:senderName="Testar" bpdm:receiverName="Iniciar" bpdm:receiverPoolId="_SJA2kCLWEd60g7_YNlzaKg" bpdm:bodyPartElemName="IniciarRequest" bpdm:bodyPartElemType="xs:string"></wsdl:input>
+          <wsdl:output message="AloMundo:IniciarResponse" name="IniciarResponse" bpdm:canid="_01QzMCLWEd60g7_YNlzaKg" bpdm:senderId="_mu7KoCLWEd60g7_YNlzaKg" bpdm:receiverId="_xprA8CLWEd60g7_YNlzaKg" bpdm:senderName="Retornar" bpdm:receiverName="Testar" bpdm:receiverPoolId="_fpziECLWEd60g7_YNlzaKg" bpdm:bodyPartElemName="IniciarResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_SIhHUSLWEd60g7_YNlzaKg" iD="_SIhHUCLWEd60g7_YNlzaKg">
+  <pools xmi:type="bpmn:Pool" xmi:id="_SJBdoCLWEd60g7_YNlzaKg" iD="_SJA2kCLWEd60g7_YNlzaKg" name="AloMundo">
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_xp9U0SLWEd60g7_YNlzaKg" iD="_xp9U0CLWEd60g7_YNlzaKg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xp9U0iLWEd60g7_YNlzaKg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xp9U0yLWEd60g7_YNlzaKg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xqECgiLWEd60g7_YNlzaKg" key="defaultDeclarationName" value="thisIniciarRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xqGewCLWEd60g7_YNlzaKg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/AloMundo}IniciarRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_xqEpkCLWEd60g7_YNlzaKg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xqFQoCLWEd60g7_YNlzaKg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xqF3sCLWEd60g7_YNlzaKg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_01VrsSLWEd60g7_YNlzaKg" iD="_01VrsCLWEd60g7_YNlzaKg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_01VrsiLWEd60g7_YNlzaKg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01VrsyLWEd60g7_YNlzaKg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01YH8CLWEd60g7_YNlzaKg" key="defaultDeclarationName" value="thisIniciarResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01akMSLWEd60g7_YNlzaKg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/AloMundo}IniciarResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_01YvACLWEd60g7_YNlzaKg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_01Z9ICLWEd60g7_YNlzaKg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01akMCLWEd60g7_YNlzaKg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_SJDS0SLWEd60g7_YNlzaKg" iD="_SJDS0CLWEd60g7_YNlzaKg" outgoingEdges="_mvBRQSLWEd60g7_YNlzaKg" incomingEdges="_k8QTISLWEd60g7_YNlzaKg" name="Retornar string" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_k8KzkSLWEd60g7_YNlzaKg" iD="_k8KzkCLWEd60g7_YNlzaKg" associations="_xqEpkCLWEd60g7_YNlzaKg" outgoingEdges="_k8QTISLWEd60g7_YNlzaKg" name="Iniciar" activityType="EventStartMessage">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_xpxuoSLWEd60g7_YNlzaKg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_mu7KoSLWEd60g7_YNlzaKg" iD="_mu7KoCLWEd60g7_YNlzaKg" associations="_01YvACLWEd60g7_YNlzaKg" incomingEdges="_mvBRQSLWEd60g7_YNlzaKg" name="Retornar" activityType="EventEndMessage">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_01QzMSLWEd60g7_YNlzaKg"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_k8QTISLWEd60g7_YNlzaKg" iD="_k8QTICLWEd60g7_YNlzaKg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_mvBRQSLWEd60g7_YNlzaKg" iD="_mvBRQCLWEd60g7_YNlzaKg"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_fpziESLWEd60g7_YNlzaKg" iD="_fpziECLWEd60g7_YNlzaKg" name="Teste">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iXURMCLWEd60g7_YNlzaKg" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iXURMSLWEd60g7_YNlzaKg" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_xp2AECLWEd60g7_YNlzaKg" iD="_xp1ZACLWEd60g7_YNlzaKg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xp2AESLWEd60g7_YNlzaKg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xp2AEiLWEd60g7_YNlzaKg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xp5qciLWEd60g7_YNlzaKg" key="defaultDeclarationName" value="aloMundoIniciarRequestMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xp8GsCLWEd60g7_YNlzaKg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/AloMundo}IniciarRequest"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_xp6RgCLWEd60g7_YNlzaKg" direction="To">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xp64kCLWEd60g7_YNlzaKg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xp7foCLWEd60g7_YNlzaKg" key="dataObjectAssociationTypeValue" value="outgoingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <artifacts xmi:type="bpmn:DataObject" xmi:id="_01byUSLWEd60g7_YNlzaKg" iD="_01byUCLWEd60g7_YNlzaKg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_01byUiLWEd60g7_YNlzaKg" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01byUyLWEd60g7_YNlzaKg" key="isBpelDeclaration" value="true"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01dngiLWEd60g7_YNlzaKg" key="defaultDeclarationName" value="aloMundoIniciarResponseMsg"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01gDwCLWEd60g7_YNlzaKg" key="douri2" value="builtin:///diagram?wsdlmessage={http://thisdiagram/AloMundo}IniciarResponse"/>
+      </eAnnotations>
+      <associations xmi:type="bpmn:Association" xmi:id="_01eOkCLWEd60g7_YNlzaKg" direction="From">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_01e1oCLWEd60g7_YNlzaKg" source="dataObjectAssociationTypeSource">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01fcsCLWEd60g7_YNlzaKg" key="dataObjectAssociationTypeValue" value="incomingMesssageVariable"/>
+        </eAnnotations>
+      </associations>
+    </artifacts>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_xprA8SLWEd60g7_YNlzaKg" iD="_xprA8CLWEd60g7_YNlzaKg" associations="_xp6RgCLWEd60g7_YNlzaKg _01eOkCLWEd60g7_YNlzaKg" name="Testar" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_xpxuoSLWEd60g7_YNlzaKg"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_01QzMSLWEd60g7_YNlzaKg"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_xpxuoSLWEd60g7_YNlzaKg" iD="_xpxuoCLWEd60g7_YNlzaKg" source="_xprA8SLWEd60g7_YNlzaKg" target="_k8KzkSLWEd60g7_YNlzaKg"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_01QzMSLWEd60g7_YNlzaKg" iD="_01QzMCLWEd60g7_YNlzaKg" source="_mu7KoSLWEd60g7_YNlzaKg" target="_xprA8SLWEd60g7_YNlzaKg"/>
+</bpmn:BpmnDiagram>
