@@ -1,0 +1,31 @@
+<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:bpel="http://schemas.xmlsoap.org/ws/2004/03/business-process/" xmlns:pnlk="http://schemas.xmlsoap.org/ws/2004/03/partner-link/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://thisdiagram/Client">
+    <bpdm:dependencies version="5000129">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Client" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/FirstProcess" bpdm:prefix="FirstProcess" bpdm:comment="contrib=&apos;partner-pool:///_MmE9YDEVEdyJMOclT3liPQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_MmE9YDEVEdyJMOclT3liPQ"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://bpms.intalio.com/FirstProcess/Time" bpdm:prefix="ns" bpdm:comment="contrib=&apos;project:///GetTime.xsd"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="process defined this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_MmE9YDEVEdyJMOclT3liPQ" bpdm:label="FirstProcess"/>
+        <bpdm:namespaceContributor bpdm:url="project:///GetTime.xsd"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Client" bpdm:ID="_KaLtkDEVEdyJMOclT3liPQ">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="firstProcessAndClientPlkVar" partnerLinkType="diag:FirstProcessAndClient" initializePartnerRole="true" partnerRole="FirstProcess_for_Client" bpdm:invokedService="FirstProcess:CanonicServiceForClient" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/FirstProcess/Client" bpdm:invokedIsDefault="true" bpdm:isManaged="true" bpdm:mgrId="_MmE9YDEVEdyJMOclT3liPQ-_KaLtkDEVEdyJMOclT3liPQ"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="firstProcessEventStartMessageResponse" messageType="FirstProcess:EventStartMessageResponse" bpdm:isManaged="true"/>
+            <bpel:variable name="firstProcessEventStartMessageRequest" messageType="FirstProcess:EventStartMessageRequest" bpdm:isManaged="true">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="FirstProcess:EventStartMessageRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="EventStartMessage" partnerLink="firstProcessAndClientPlkVar" portType="FirstProcess:ForClient" isMyRole="false" bpdm:label="send" bpdm:ID="_KaLtkjEVEdyJMOclT3liPQ">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="firstProcessEventStartMessageRequest" bpdm:variableIsManaged="true" bpdm:messageType="FirstProcess:EventStartMessageRequest" bpdm:ID="_PowEMDEVEdyJMOclT3liPQ"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="firstProcessEventStartMessageResponse" bpdm:variableIsManaged="true" bpdm:messageType="FirstProcess:EventStartMessageResponse" bpdm:ID="_UY-R8DEVEdyJMOclT3liPQ"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
