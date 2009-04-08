@@ -1,0 +1,11 @@
+#Fri Jun 01 16:22:07 IST 2007
+deploy.fileRuntimeSelection=TimeService.wsdl\:GetTime.xsd\:FirstProcess.bpm\:
+deploy_bundleArchiveName=/FirstProcess/FirstProcess.zip
+deploy_bundleShouldBeArchived=false
+deploy_bundleShouldBeDeployed=true
+deploy_serverUrl=http\://localhost\:8080/ode
+deploy_workflow_serverUrl=http\://localhost\:8080/wds
+deploy_workflowbundleShouldBeArchived=false
+deploy_workflowbundleShouldBeDeployed=false
+diagram_baseUri=http\://example.com
+eclipse.preferences.version=1

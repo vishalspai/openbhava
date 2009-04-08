@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:FirstProcess="http://thisdiagram/FirstProcess" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:Client="http://thisdiagram/Client" xmlns:diag="http://thisdiagram" xmlns:TimeService="http://ws.intalio.com/TimeService/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:ns="http://bpms.intalio.com/FirstProcess/Time" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" targetNamespace="http://thisdiagram" bpdm:version="6000031" bpdm:canid="_KZcGsDEVEdyJMOclT3liPQ" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="TimeServerAndFirstProcess" bpdm:poolOneId="_X3pYQDEVEdyJMOclT3liPQ" bpdm:poolOneIsExecutable="false" bpdm:poolOneName="TimeServer" bpdm:poolTwoId="_MmE9YDEVEdyJMOclT3liPQ" bpdm:poolTwoIsExecutable="true" bpdm:poolTwoName="FirstProcess">
+    <pnlk:role name="TimeServer_for_FirstProcess" portType="{http://thisdiagram/TimeServer}ForFirstProcess" bpdm:thisPoolId="_X3pYQDEVEdyJMOclT3liPQ">
+      <wsdl:portType name="ForFirstProcess">
+        <wsdl:operation name="getCityTime" bpdm:canid="_SsKx4DEVEdyJMOclT3liPQ._hk4SmDEVEdyJMOclT3liPQ." bpdm:dataobjectPointer="project:///TimeService.wsdl?wsdloperationbound={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime">
+          <wsdl:input message="TimeService:getCityTimeRequest" name="getCityTime" bpdm:canid="_h9dKoDEVEdyJMOclT3liPQ" bpdm:senderId="_SsKx4DEVEdyJMOclT3liPQ" bpdm:receiverId="_hk4SmDEVEdyJMOclT3liPQ" bpdm:senderName="getCityTime" bpdm:receiverName="getCityTime" bpdm:receiverPoolId="_X3pYQDEVEdyJMOclT3liPQ" bpdm:dataobjectPointer="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime/input/getCityTimeRequest"></wsdl:input>
+          <wsdl:output message="TimeService:getCityTimeResponse" name="getCityTimeResponse" bpdm:canid="_iLAecDEVEdyJMOclT3liPQ" bpdm:senderId="_hk4SmDEVEdyJMOclT3liPQ" bpdm:receiverId="_SsKx4DEVEdyJMOclT3liPQ" bpdm:senderName="getCityTime" bpdm:receiverName="getCityTime" bpdm:receiverPoolId="_MmE9YDEVEdyJMOclT3liPQ" bpdm:dataobjectPointer="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime/output/getCityTimeResponse"></wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUTCTime" bpdm:canid="_dyOQkDEmEdyJMOclT3liPQ._hf41IDEmEdyJMOclT3liPQ." bpdm:dataobjectPointer="project:///TimeService.wsdl?wsdloperationbound={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime">
+          <wsdl:input message="TimeService:getUTCTimeRequest" name="getUTCTime" bpdm:canid="_h1VgsDEmEdyJMOclT3liPQ" bpdm:senderId="_dyOQkDEmEdyJMOclT3liPQ" bpdm:receiverId="_hf41IDEmEdyJMOclT3liPQ" bpdm:senderName="getUTCTime" bpdm:receiverName="getUTCTime" bpdm:receiverPoolId="_X3pYQDEVEdyJMOclT3liPQ" bpdm:dataobjectPointer="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime/input/getUTCTimeRequest"></wsdl:input>
+          <wsdl:output message="TimeService:getUTCTimeResponse" name="getUTCTimeResponse" bpdm:canid="_h_7AEDEmEdyJMOclT3liPQ" bpdm:senderId="_hf41IDEmEdyJMOclT3liPQ" bpdm:receiverId="_dyOQkDEmEdyJMOclT3liPQ" bpdm:senderName="getUTCTime" bpdm:receiverName="getUTCTime" bpdm:receiverPoolId="_MmE9YDEVEdyJMOclT3liPQ" bpdm:dataobjectPointer="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime/output/getUTCTimeResponse"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+  <pnlk:partnerLinkType name="FirstProcessAndClient" bpdm:poolOneId="_MmE9YDEVEdyJMOclT3liPQ" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="FirstProcess" bpdm:poolTwoId="_KaLtkDEVEdyJMOclT3liPQ" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Client">
+    <pnlk:role name="FirstProcess_for_Client" portType="FirstProcess:ForClient" bpdm:thisPoolId="_MmE9YDEVEdyJMOclT3liPQ">
+      <wsdl:portType name="ForClient">
+        <wsdl:operation name="EventStartMessage" bpdm:canid="_KaLtkjEVEdyJMOclT3liPQ._PodJQDEVEdyJMOclT3liPQ._UAjK4DEVEdyJMOclT3liPQ.">
+          <wsdl:input message="FirstProcess:EventStartMessageRequest" name="EventStartMessage" bpdm:canid="_PowEMDEVEdyJMOclT3liPQ" bpdm:senderId="_KaLtkjEVEdyJMOclT3liPQ" bpdm:receiverId="_PodJQDEVEdyJMOclT3liPQ" bpdm:senderName="send" bpdm:receiverName="EventStartMessage" bpdm:receiverPoolId="_MmE9YDEVEdyJMOclT3liPQ" bpdm:dataobjectPointer="project:///GetTime.xsd?xsdelement={http://bpms.intalio.com/FirstProcess/Time}TimeRequest"></wsdl:input>
+          <wsdl:output message="FirstProcess:EventStartMessageResponse" name="EventStartMessageResponse" bpdm:canid="_UY-R8DEVEdyJMOclT3liPQ" bpdm:senderId="_UAjK4DEVEdyJMOclT3liPQ" bpdm:receiverId="_KaLtkjEVEdyJMOclT3liPQ" bpdm:senderName="EventEndMessage" bpdm:receiverName="send" bpdm:receiverPoolId="_KaLtkDEVEdyJMOclT3liPQ" bpdm:dataobjectPointer="project:///GetTime.xsd?xsdelement={http://bpms.intalio.com/FirstProcess/Time}TimeResponse"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>

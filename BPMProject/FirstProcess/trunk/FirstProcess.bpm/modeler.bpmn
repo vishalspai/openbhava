@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_KZcGsTEVEdyJMOclT3liPQ" iD="_KZcGsDEVEdyJMOclT3liPQ">
+  <pools xmi:type="bpmn:Pool" xmi:id="_KaLtkTEVEdyJMOclT3liPQ" iD="_KaLtkDEVEdyJMOclT3liPQ" name="Client">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lm-34DEVEdyJMOclT3liPQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Lm-34TEVEdyJMOclT3liPQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_KaLtkzEVEdyJMOclT3liPQ" iD="_KaLtkjEVEdyJMOclT3liPQ" name="send" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_PowEMTEVEdyJMOclT3liPQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_UY-R8TEVEdyJMOclT3liPQ"/>
+    </vertices>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_MmE9YTEVEdyJMOclT3liPQ" iD="_MmE9YDEVEdyJMOclT3liPQ" name="FirstProcess">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_PodJQTEVEdyJMOclT3liPQ" iD="_PodJQDEVEdyJMOclT3liPQ" outgoingEdges="_B3ywkTEnEdyJMOclT3liPQ" activityType="Message Start Event">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_PowEMTEVEdyJMOclT3liPQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_SsKx4TEVEdyJMOclT3liPQ" iD="_SsKx4DEVEdyJMOclT3liPQ" outgoingEdges="_CTqNMTEnEdyJMOclT3liPQ" incomingEdges="_CCOe8TEnEdyJMOclT3liPQ" name="getCityTime" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_h9dKoTEVEdyJMOclT3liPQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_iLAecTEVEdyJMOclT3liPQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_UAjK4TEVEdyJMOclT3liPQ" iD="_UAjK4DEVEdyJMOclT3liPQ" incomingEdges="_CTqNMTEnEdyJMOclT3liPQ" activityType="Message End Event">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_UY-R8TEVEdyJMOclT3liPQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_dyOQkTEmEdyJMOclT3liPQ" iD="_dyOQkDEmEdyJMOclT3liPQ" outgoingEdges="_CCOe8TEnEdyJMOclT3liPQ" incomingEdges="_B3ywkTEnEdyJMOclT3liPQ" name="getUTCTime" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_h1VgsTEmEdyJMOclT3liPQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_h_7AETEmEdyJMOclT3liPQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_B3ywkTEnEdyJMOclT3liPQ" iD="_B3ywkDEnEdyJMOclT3liPQ" source="_PodJQTEVEdyJMOclT3liPQ" target="_dyOQkTEmEdyJMOclT3liPQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_CCOe8TEnEdyJMOclT3liPQ" iD="_CCOe8DEnEdyJMOclT3liPQ" source="_dyOQkTEmEdyJMOclT3liPQ" target="_SsKx4TEVEdyJMOclT3liPQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_CTqNMTEnEdyJMOclT3liPQ" iD="_CTqNMDEnEdyJMOclT3liPQ" source="_SsKx4TEVEdyJMOclT3liPQ" target="_UAjK4TEVEdyJMOclT3liPQ"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_X3pYQTEVEdyJMOclT3liPQ" iD="_X3pYQDEVEdyJMOclT3liPQ" name="TimeServer">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZKA_EDEVEdyJMOclT3liPQ" source="executablepool">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZKA_ETEVEdyJMOclT3liPQ" key="poolIsExecutable" value="false"/>
+    </eAnnotations>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_hk4StjEVEdyJMOclT3liPQ" iD="_hk4SmDEVEdyJMOclT3liPQ" name="getCityTime" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hlCDkDEVEdyJMOclT3liPQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hlCDkTEVEdyJMOclT3liPQ" key="douri" value="project:///TimeService.wsdl?wsdloperationbound={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_h9dKoTEVEdyJMOclT3liPQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_iLAecTEVEdyJMOclT3liPQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_hf41PjEmEdyJMOclT3liPQ" iD="_hf41IDEmEdyJMOclT3liPQ" name="getUTCTime" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hf41PzEmEdyJMOclT3liPQ" source="attachedDataobject">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hf41QDEmEdyJMOclT3liPQ" key="douri" value="project:///TimeService.wsdl?wsdloperationbound={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime"/>
+      </eAnnotations>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_h1VgsTEmEdyJMOclT3liPQ"/>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_h_7AETEmEdyJMOclT3liPQ"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_PowEMTEVEdyJMOclT3liPQ" iD="_PowEMDEVEdyJMOclT3liPQ" source="_KaLtkzEVEdyJMOclT3liPQ" target="_PodJQTEVEdyJMOclT3liPQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kPkXMDEVEdyJMOclT3liPQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kPkXMTEVEdyJMOclT3liPQ" key="douri" value="project:///GetTime.xsd?xsdelement={http://bpms.intalio.com/FirstProcess/Time}TimeRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_UY-R8TEVEdyJMOclT3liPQ" iD="_UY-R8DEVEdyJMOclT3liPQ" source="_UAjK4TEVEdyJMOclT3liPQ" target="_KaLtkzEVEdyJMOclT3liPQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k9vr0DEVEdyJMOclT3liPQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_k9vr0TEVEdyJMOclT3liPQ" key="douri" value="project:///GetTime.xsd?xsdelement={http://bpms.intalio.com/FirstProcess/Time}TimeResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_h9dKoTEVEdyJMOclT3liPQ" iD="_h9dKoDEVEdyJMOclT3liPQ" source="_SsKx4TEVEdyJMOclT3liPQ" target="_hk4StjEVEdyJMOclT3liPQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h9m7oDEVEdyJMOclT3liPQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h9m7oTEVEdyJMOclT3liPQ" key="douri" value="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime/input/getCityTimeRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_iLAecTEVEdyJMOclT3liPQ" iD="_iLAecDEVEdyJMOclT3liPQ" source="_hk4StjEVEdyJMOclT3liPQ" target="_SsKx4TEVEdyJMOclT3liPQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iLAecjEVEdyJMOclT3liPQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iLAeczEVEdyJMOclT3liPQ" key="douri" value="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getCityTime/output/getCityTimeResponse"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_h1VgsTEmEdyJMOclT3liPQ" iD="_h1VgsDEmEdyJMOclT3liPQ" source="_dyOQkTEmEdyJMOclT3liPQ" target="_hf41PjEmEdyJMOclT3liPQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h1fRsDEmEdyJMOclT3liPQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h1fRsTEmEdyJMOclT3liPQ" key="douri" value="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime/input/getUTCTimeRequest"/>
+    </eAnnotations>
+  </messages>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_h_7AETEmEdyJMOclT3liPQ" iD="_h_7AEDEmEdyJMOclT3liPQ" source="_hf41PjEmEdyJMOclT3liPQ" target="_dyOQkTEmEdyJMOclT3liPQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iAEKADEmEdyJMOclT3liPQ" source="attachedDataobject">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iAEKATEmEdyJMOclT3liPQ" key="douri" value="project:///TimeService.wsdl?messageForBoundOperation={http://ws.intalio.com/TimeService/}TimeService/TimeServiceSoap/getUTCTime/output/getUTCTimeResponse"/>
+    </eAnnotations>
+  </messages>
+</bpmn:BpmnDiagram>
