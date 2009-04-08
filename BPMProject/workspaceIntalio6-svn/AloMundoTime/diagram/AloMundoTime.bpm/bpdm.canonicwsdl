@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:AloMundoTime="http://thisdiagram/AloMundoTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:Usuario="http://thisdiagram/Usuario" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" targetNamespace="http://thisdiagram" bpdm:version="6000031" bpdm:canid="_i65vcSPTEd6F9qKbFqzsMA" bpdm:displayName="diag">
+  <pnlk:partnerLinkType name="AloMundoTimeAndUsuario" bpdm:poolOneId="_i8XIACPTEd6F9qKbFqzsMA" bpdm:poolOneIsExecutable="true" bpdm:poolOneName="AloMundoTime" bpdm:poolTwoId="_0d0MkCPTEd6F9qKbFqzsMA" bpdm:poolTwoIsExecutable="false" bpdm:poolTwoName="Usuario">
+    <pnlk:role name="AloMundoTime_for_Usuario" portType="AloMundoTime:ForUsuario" bpdm:thisPoolId="_i8XIACPTEd6F9qKbFqzsMA">
+      <wsdl:portType name="ForUsuario">
+        <wsdl:operation name="Iniciar" bpdm:canid="__K0h0CPTEd6F9qKbFqzsMA._oSSD0CPTEd6F9qKbFqzsMA._qY6ZICPTEd6F9qKbFqzsMA.">
+          <wsdl:input message="AloMundoTime:IniciarRequest" name="Iniciar" bpdm:canid="_DyP_8CPUEd6F9qKbFqzsMA" bpdm:senderId="__K0h0CPTEd6F9qKbFqzsMA" bpdm:receiverId="_oSSD0CPTEd6F9qKbFqzsMA" bpdm:senderName="Usar" bpdm:receiverName="Iniciar" bpdm:receiverPoolId="_i8XIACPTEd6F9qKbFqzsMA" bpdm:bodyPartElemName="IniciarRequest" bpdm:bodyPartElemType="xs:string"></wsdl:input>
+          <wsdl:output message="AloMundoTime:IniciarResponse" name="IniciarResponse" bpdm:canid="_FgPy0CPUEd6F9qKbFqzsMA" bpdm:senderId="_qY6ZICPTEd6F9qKbFqzsMA" bpdm:receiverId="__K0h0CPTEd6F9qKbFqzsMA" bpdm:senderName="Terminar" bpdm:receiverName="Usar" bpdm:receiverPoolId="_0d0MkCPTEd6F9qKbFqzsMA" bpdm:bodyPartElemName="IniciarResponse" bpdm:bodyPartElemType="xs:string"></wsdl:output>
+        </wsdl:operation>
+      </wsdl:portType>
+    </pnlk:role>
+  </pnlk:partnerLinkType>
+</wsdl:definitions>

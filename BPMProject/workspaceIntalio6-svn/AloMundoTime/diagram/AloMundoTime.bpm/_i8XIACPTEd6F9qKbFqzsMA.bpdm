@@ -1,0 +1,79 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:this="http://thisdiagram/AloMundoTime" xmlns:Usuario="http://thisdiagram/Usuario" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/AloMundoTime">
+    <bpdm:dependencies version="6000031">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/AloMundoTime" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Usuario" bpdm:prefix="Usuario" bpdm:comment="contrib=&apos;partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="processo definido this-process-types">
+            <wsdl:portType name="ForUsuario">
+                <wsdl:operation name="Iniciar" bpdm:source="partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA">
+                    <wsdl:input message="this:IniciarRequest" name="Iniciar"/>
+                    <wsdl:output message="this:IniciarResponse" name="IniciarResponse"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <xs:element name="IniciarRequest" type="xs:string" bpdm:source="partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA"/>
+            <wsdl:message name="IniciarRequest" bpdm:source="partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA">
+                <wsdl:part name="body" element="this:IniciarRequest"/>
+            </wsdl:message>
+            <xs:element name="IniciarResponse" type="xs:string" bpdm:source="partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA"/>
+            <wsdl:message name="IniciarResponse" bpdm:source="partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA">
+                <wsdl:part name="body" element="this:IniciarResponse"/>
+            </wsdl:message>
+            <bpel:binding name="CanonicBindingForUsuario" type="this:ForUsuario" bpdm:isSynchronized="true"/>
+        </bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_0d0MkCPTEd6F9qKbFqzsMA" bpdm:label="Usuario"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="AloMundoTime" bpdm:ID="_i8XIACPTEd6F9qKbFqzsMA">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="aloMundoTimeAndUsuarioPlkVar" partnerLinkType="diag:AloMundoTimeAndUsuario" myRole="AloMundoTime_for_Usuario" bpdm:enableSharing="false" bpdm:providedService="this:CanonicServiceForUsuario" bpdm:providedPort="canonicPort" bpdm:provideSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/AloMundoTime/Usuario" bpdm:providedIsDefault="true" bpdm:clientTasks="_i8XIACPTEd6F9qKbFqzsMA:_qY6ZICPTEd6F9qKbFqzsMA, _i8XIACPTEd6F9qKbFqzsMA:_oSSD0CPTEd6F9qKbFqzsMA" bpdm:isManaged="true" bpdm:otherPoolId="_0d0MkCPTEd6F9qKbFqzsMA"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="thisIniciarRequestMsg" messageType="this:IniciarRequest" bpdm:id="_Dy9xoCPUEd6F9qKbFqzsMA" bpdm:messageIds="inc:_DyP_8CPUEd6F9qKbFqzsMA"/>
+            <bpel:variable name="thisIniciarResponseMsg" messageType="this:IniciarResponse" bpdm:id="_FgV5cCPUEd6F9qKbFqzsMA" bpdm:messageIds=" out:_FgPy0CPUEd6F9qKbFqzsMA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="this:IniciarResponse" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask eventType="start: message" operation="Iniciar" partnerLink="aloMundoTimeAndUsuarioPlkVar" portType="this:ForUsuario" isMyRole="true" enableSharing="false" bpdm:label="Iniciar" bpdm:ID="_oSSD0CPTEd6F9qKbFqzsMA">
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="receive" bpdm:messageVariable="thisIniciarRequestMsg" bpdm:msgVarScopeId="_i8XIACPTEd6F9qKbFqzsMA" bpdm:variableIsManaged="true" bpdm:messageType="this:IniciarRequest" bpdm:ID="_DyP_8CPUEd6F9qKbFqzsMA"></bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask bpdm:label="CriarMensagem" bpdm:ID="_i87IsCPTEd6F9qKbFqzsMA">
+                <bpdm:linkset bpdm:type="assignments">
+                    <bpel:copy>
+                        <bpel:from>concat(concat(concat("Alô, ", $thisIniciarRequestMsg.body/text()), "! A hora atual é: "), "Brazil")</bpel:from>
+                        <bpel:to>$thisIniciarResponseMsg.body/text()</bpel:to>
+<mapper:mapperLink>
+  <mapper:vertice id="7756823" targetPath="$thisIniciarResponseMsg.body/text()" targetedBy="1499877-arg1"></mapper:vertice>
+  <mapper:vertice id="1499877" dimension="78x24" location="396,120">
+    <mapper:value>concat()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="9956164" dimension="78x24" location="300,85" targetedBy="1499877-arg0">
+    <mapper:value>concat()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="30855726" dimension="78x24" location="182,43" targetedBy="9956164-arg0">
+    <mapper:value>concat()</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="18894106" dimension="78x24" location="60,12" targetedBy="30855726-arg0">
+    <mapper:value>"Alô, "</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="33000926" sourcePath="$thisIniciarRequestMsg.body/text()" targetedBy="30855726-arg1"></mapper:vertice>
+  <mapper:vertice id="15408035" dimension="78x24" location="192,120" targetedBy="9956164-arg1">
+    <mapper:value>"! A hora atual é: "</mapper:value>
+  </mapper:vertice>
+  <mapper:vertice id="21752640" dimension="78x24" location="300,168" targetedBy="1499877-arg2">
+    <mapper:value>"Brazil"</mapper:value>
+  </mapper:vertice>
+</mapper:mapperLink>
+                    </bpel:copy>
+                </bpdm:linkset>
+            </bpdm:messagingtask>
+            <bpdm:messagingtask eventType="end: message" operation="Iniciar" partnerLink="aloMundoTimeAndUsuarioPlkVar" portType="this:ForUsuario" isMyRole="true" enableSharing="false" bpdm:label="Terminar" bpdm:ID="_qY6ZICPTEd6F9qKbFqzsMA">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="reply" bpdm:messageVariable="thisIniciarResponseMsg" bpdm:msgVarScopeId="_i8XIACPTEd6F9qKbFqzsMA" bpdm:variableIsManaged="true" bpdm:messageType="this:IniciarResponse" bpdm:ID="_FgPy0CPUEd6F9qKbFqzsMA"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
