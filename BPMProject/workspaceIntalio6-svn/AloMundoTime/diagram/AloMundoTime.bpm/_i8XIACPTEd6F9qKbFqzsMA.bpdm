@@ -44,7 +44,7 @@
             <bpdm:messagingtask bpdm:label="CriarMensagem" bpdm:ID="_i87IsCPTEd6F9qKbFqzsMA">
                 <bpdm:linkset bpdm:type="assignments">
                     <bpel:copy>
-                        <bpel:from>concat(concat(concat("Alô, ", $thisIniciarRequestMsg.body/text()), "! A hora atual é: "), "Brazil")</bpel:from>
+                        <bpel:from>concat(concat(concat("Alô, ", $thisIniciarRequestMsg.body/text()), "! A hora atual é: "), "&lt;horaatual&gt;")</bpel:from>
                         <bpel:to>$thisIniciarResponseMsg.body/text()</bpel:to>
 <mapper:mapperLink>
   <mapper:vertice id="7756823" targetPath="$thisIniciarResponseMsg.body/text()" targetedBy="1499877-arg1"></mapper:vertice>
@@ -65,7 +65,7 @@
     <mapper:value>"! A hora atual é: "</mapper:value>
   </mapper:vertice>
   <mapper:vertice id="21752640" dimension="78x24" location="300,168" targetedBy="1499877-arg2">
-    <mapper:value>"Brazil"</mapper:value>
+    <mapper:value>"&lt;horaatual&gt;"</mapper:value>
   </mapper:vertice>
 </mapper:mapperLink>
                     </bpel:copy>
