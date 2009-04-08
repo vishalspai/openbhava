@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<todo version="1.00">
+	<project>
+		<name>IntalioStudy</name>
+		<desc>Intalio Designer and BPMS study.</desc>
+		<context>
+		   - Review of Projeler course and ABPMP-BR course 
+		   - Study of Intalio software
+		</context>
+	</project>
+	<time>
+		<short-term>
+			<task>
+			  Folow the steps available at:
+			  - http://bpms.intalio.com/getting-started/10-first-steps-with-intalio-bpms.html
+			</task>
+			<task>
+			  Install subversive plugin in Intalio Designer
+			</task>
+			<task>
+			  Review the Projeler and ABPMP-BR courses
+			</task>
+			<task>
+			</task>
+		</short-term>
+		<long-term>
+			<task>
+			</task>
+		</long-term>
+		<done>
+			<task>
+			</task>
+		</done>
+	</time>
+</todo>
