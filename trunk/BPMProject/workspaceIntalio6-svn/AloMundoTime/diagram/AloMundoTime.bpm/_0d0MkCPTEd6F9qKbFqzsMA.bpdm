@@ -1,0 +1,31 @@
+﻿<bpel:process xmlns:bpdm="http://www.intalio/designer/business-process-data-modeling" xmlns:mapper="http://www.intalio.com/designer/mapper" xmlns:AloMundoTime="http://thisdiagram/AloMundoTime" xmlns:this="http://thisdiagram/Usuario" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://thisdiagram" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:pnlk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ode="http://www.apache.org/ode/type/extension" targetNamespace="http://thisdiagram/Usuario">
+    <bpdm:dependencies version="6000031">
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/AloMundoTime" bpdm:prefix="AloMundoTime" bpdm:comment="contrib=&apos;partner-pool:///_i8XIACPTEd6F9qKbFqzsMA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram/Usuario" bpdm:prefix="this" bpdm:type="this_process"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema" bpdm:prefix="xs"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/2001/XMLSchema-instance" bpdm:prefix="xsi"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://thisdiagram" bpdm:prefix="diag" bpdm:comment="contrib=&apos;partner-pool:///_i8XIACPTEd6F9qKbFqzsMA"></bpdm:namespaceDefinition>
+        <bpdm:namespaceDefinition bpdm:uri="http://www.w3.org/XML/1998/namespace" bpdm:prefix="xml"></bpdm:namespaceDefinition>
+        <bpdm:namespaceContributor bpdm:url="thisprocess://this-process-types" bpdm:label="processo definido this-process-types"></bpdm:namespaceContributor>
+        <bpdm:namespaceContributor bpdm:url="partner-pool:///_i8XIACPTEd6F9qKbFqzsMA" bpdm:label="AloMundoTime"/>
+    </bpdm:dependencies>
+    <bpel:scope bpdm:label="Usuario" bpdm:ID="_0d0MkCPTEd6F9qKbFqzsMA">
+        <bpel:partnerLinks>
+            <bpel:partnerLink name="aloMundoTimeAndUsuarioPlkVar" partnerLinkType="diag:AloMundoTimeAndUsuario" initializePartnerRole="yes" partnerRole="AloMundoTime_for_Usuario" bpdm:invokedService="AloMundoTime:CanonicServiceForUsuario" bpdm:invokedPort="canonicPort" bpdm:invokedSOAPAddress="${deploy_serverUrl}${deploy_baseSoapServicesUrl}/${deploy_bundleNcName}/${diagram_relativeURL}/AloMundoTime/Usuario" bpdm:invokedIsDefault="true" bpdm:clientTasks="_0d0MkCPTEd6F9qKbFqzsMA:__K0h0CPTEd6F9qKbFqzsMA" bpdm:isManaged="true" bpdm:otherPoolId="_i8XIACPTEd6F9qKbFqzsMA"/>
+        </bpel:partnerLinks>
+        <bpel:variables>
+            <bpel:variable name="aloMundoTimeIniciarRequestMsg" messageType="AloMundoTime:IniciarRequest" bpdm:id="_DyzZkCPUEd6F9qKbFqzsMA" bpdm:messageIds=" out:_DyP_8CPUEd6F9qKbFqzsMA">
+                <bpel:from bpdm:toPart="body">
+                    <bpel:literal bpdm:linkedMessageType="AloMundoTime:IniciarRequest" bpdm:linkedPart="body"></bpel:literal>
+                </bpel:from>
+            </bpel:variable>
+            <bpel:variable name="aloMundoTimeIniciarResponseMsg" messageType="AloMundoTime:IniciarResponse" bpdm:id="_FgfDYCPUEd6F9qKbFqzsMA" bpdm:messageIds="inc:_FgPy0CPUEd6F9qKbFqzsMA"/>
+        </bpel:variables>
+        <bpel:sequence>
+            <bpdm:messagingtask operation="Iniciar" partnerLink="aloMundoTimeAndUsuarioPlkVar" portType="AloMundoTime:ForUsuario" isMyRole="false" enableSharing="false" bpdm:label="Usar" bpdm:ID="__K0h0CPTEd6F9qKbFqzsMA">
+                <bpdm:linkset bpdm:type="outgoingMessage" bpdm:bpeltype="invoke-request" bpdm:messageVariable="aloMundoTimeIniciarRequestMsg" bpdm:msgVarScopeId="_0d0MkCPTEd6F9qKbFqzsMA" bpdm:variableIsManaged="true" bpdm:messageType="AloMundoTime:IniciarRequest" bpdm:ID="_DyP_8CPUEd6F9qKbFqzsMA"></bpdm:linkset>
+                <bpdm:linkset bpdm:type="incomingMessage" bpdm:bpeltype="invoke-receive" bpdm:messageVariable="aloMundoTimeIniciarResponseMsg" bpdm:msgVarScopeId="_0d0MkCPTEd6F9qKbFqzsMA" bpdm:variableIsManaged="true" bpdm:messageType="AloMundoTime:IniciarResponse" bpdm:ID="_FgPy0CPUEd6F9qKbFqzsMA"></bpdm:linkset>
+            </bpdm:messagingtask>
+        </bpel:sequence>
+    </bpel:scope>
+</bpel:process>
