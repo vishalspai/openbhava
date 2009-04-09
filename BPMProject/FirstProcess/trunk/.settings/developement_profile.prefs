@@ -1,11 +1,14 @@
-#Fri Jun 01 16:22:07 IST 2007
+#Thu Apr 09 11:42:28 BRT 2009
+bundleExportPath=/home/user/work/openbhava-Eclipse/workspaceIntalio-SVN/FirstProcess
 deploy.fileRuntimeSelection=TimeService.wsdl\:GetTime.xsd\:FirstProcess.bpm\:
 deploy_bundleArchiveName=/FirstProcess/FirstProcess.zip
+deploy_bundleNcName=FirstProcess
 deploy_bundleShouldBeArchived=false
 deploy_bundleShouldBeDeployed=true
+deploy_gi_serverUrl=http\://localhost\:8080/gi
 deploy_serverUrl=http\://localhost\:8080/ode
 deploy_workflow_serverUrl=http\://localhost\:8080/wds
 deploy_workflowbundleShouldBeArchived=false
 deploy_workflowbundleShouldBeDeployed=false
-diagram_baseUri=http\://example.com
+diagram_baseUri=http\://bpmframework.googlecode.com/svn/trunk/xml/2009
 eclipse.preferences.version=1
